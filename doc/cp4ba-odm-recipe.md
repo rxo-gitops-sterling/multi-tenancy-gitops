@@ -27,9 +27,9 @@ This recipe is for deploying the Operational Desision Manager in a single namesp
 
     | Component | Access Mode | IBM Cloud | OCS/ODF |
     | --- | --- | --- | --- |
-    | DB2 | RWX | ibmc-file-gold-gid | ocs-storagecluster-cephfs |
-    | LDAP | RWX | ibmc-file-gold <br/> managed-nfs-storage | ocs-storagecluster-cephfs |
-    | ODM | RWX | ibmc-file-gold-gid <br/> managed-nfs-storage | ocs-storagecluster-cephfs |
+    | DB2 | RWX | ibmc-file-gold-gid | ibmc-block-gold |
+    | LDAP | RWX | ibmc-file-gold <br/> managed-nfs-storage | ibmc-block-gold |
+    | ODM | RWX | ibmc-file-gold-gid <br/> managed-nfs-storage | ibmc-block-gold |
     | ODM | RWO | ibmc-block-gold <br/> managed-nfs-storage | ocs-storagecluster-ceph-rbd |
 
     Changing the storage classes are performed in the following files:

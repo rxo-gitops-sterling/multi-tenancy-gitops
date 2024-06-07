@@ -33,7 +33,7 @@ spec:
             repository: quay.io/jeric_saez_ibm/ibm-db2-sccm:1.0.4
             pullPolicy: IfNotPresent
           storageClassName: ibmc-block-gold
-          #storageClassName: ocs-storagecluster-cephfs
+          #storageClassName: ibmc-block-gold
           
           service:
             name: db2-lb

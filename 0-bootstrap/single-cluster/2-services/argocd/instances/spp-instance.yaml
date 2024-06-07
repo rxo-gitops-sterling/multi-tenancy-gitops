@@ -93,7 +93,7 @@ spec:
               image_pull_secret: ibmspp-image-secret
               hostname: ibmspp.apps.vbudi-spp-test-001.cp.fyre.ibm.com
               tls_secret: spp-tls
-              storage_class_name: ocs-storagecluster-cephfs
+              storage_class_name: ibmc-block-gold
               service_account: ibm-spp
               version: 10.1.8.4124
               security_context: true

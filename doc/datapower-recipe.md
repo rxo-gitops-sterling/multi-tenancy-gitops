@@ -27,7 +27,7 @@ This recipe is for deploying the DataPower Gateway in a single namespace (i.e. `
 
     | Component | Access Mode | IBM Cloud | OCS/ODF |
     | --- | --- | --- | --- |
-    | Platform Navigator | RWX | managed-nfs-storage | ocs-storagecluster-cephfs |
+    | Platform Navigator | RWX | managed-nfs-storage | ibmc-block-gold |
 
 1. Edit the Services layer `${GITOPS_PROFILE}/2-services/kustomization.yaml` and install Sealed Secrets by uncommenting the following line, **commit** and **push** the changes and refresh the `services` Application in the ArgoCD console.
    

@@ -37,7 +37,7 @@ In particular, these infra resources are assumed to have already been deployed (
 
 | Component | Access Mode | IBM Cloud | OCS/ODF |
 | --- | --- | --- | --- |
-| PVC | RWO | ibmc-file-gold-gid | ocs-storagecluster-cephfs |
+| PVC | RWO | ibmc-file-gold-gid | ibmc-block-gold |
 
 You can find the PVC yaml in `multi-tenancy-gitops-services/instances/ibm-connect-direct-setup/storage`  
 

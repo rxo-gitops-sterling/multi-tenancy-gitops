@@ -33,7 +33,7 @@ spec:
             repository: ibmcom/db2:11.5.7.0
             pullPolicy: IfNotPresent
           storageClassName: ibmc-block-gold
-          #storageClassName: ocs-storagecluster-cephfs
+          #storageClassName: ibmc-block-gold
           createdb: |
             CREATE DATABASE PEMDB AUTOMATIC STORAGE YES USING CODESET UTF-8 TERRITORY DEFAULT COLLATE USING IDENTITY PAGESIZE 4096;
             CONNECT TO PEMDB;

@@ -54,7 +54,7 @@ install_gitea () {
   TOOLKIT_NAMESPACE=${TOOLKIT_NAMESPACE:-tools}
   GIT_CRED_USERNAME=${GIT_CRED_USERNAME:-toolkit}
   GIT_CRED_PASSWORD=${GIT_CRED_PASSWORD:-toolkit}
-  RWX_STORAGE_CLASS=${RWX_STORAGE_CLASS:-ocs-storagecluster-cephfs}
+  RWX_STORAGE_CLASS=${RWX_STORAGE_CLASS:-ibmc-block-gold}
 
   OPERATOR_NAME="gitea-operator"
   OPERATOR_NAMESPACE="openshift-operators"
@@ -645,7 +645,7 @@ print_urls_passwords () {
 
 set_rwx_storage_class () {
   DEFAULT_RWX_STORAGE_CLASS=${DEFAULT_RWX_STORAGE_CLASS:-managed-nfs-storage}
-  OCS_RWX_STORAGE_CLASS=${OCS_RWX_STORAGE_CLASS:-ocs-storagecluster-cephfs}
+  OCS_RWX_STORAGE_CLASS=${OCS_RWX_STORAGE_CLASS:-ibmc-block-gold}
   RWX_STORAGE_CLASS=${OCS_RWX_STORAGE_CLASS}
 
   echo "Replacing ${DEFAULT_RWX_STORAGE_CLASS} with ${RWX_STORAGE_CLASS} storage class "
@@ -686,7 +686,7 @@ enable_cp4d() {
 
   # #This is currently covered by the default storage replacement 
   # pushd ${TMP_DIR}/gitops-0-bootstrap/0-bootstrap/single-cluster/2-services/argocd/instances
-  # sed -i.bak 's/managed-nfs-storage/ocs-storagecluster-cephfs/g' ibm-cpd-instance.yaml
+  # sed -i.bak 's/managed-nfs-storage/ibmc-block-gold/g' ibm-cpd-instance.yaml
   # rm ibm-cpd-instance.yaml.bak
   # popd
 
@@ -726,7 +726,7 @@ enable_cp4i() {
 
   # #This is currently covered by the default storage replacement 
   # pushd ${TMP_DIR}/gitops-0-bootstrap/0-bootstrap/single-cluster/2-services/argocd/instances
-  # sed -i.bak 's/managed-nfs-storage/ocs-storagecluster-cephfs/g' ibm-platform-navigator-instance.yaml
+  # sed -i.bak 's/managed-nfs-storage/ibmc-block-gold/g' ibm-platform-navigator-instance.yaml
   # rm ibm-cpd-instance.yaml.bak
   # popd
 
@@ -768,7 +768,7 @@ enable_cp4s() {
 
   # #This is currently covered by the default storage replacement 
   # pushd ${TMP_DIR}/gitops-0-bootstrap/0-bootstrap/single-cluster/2-services/argocd/instances
-  # sed -i.bak 's/managed-nfs-storage/ocs-storagecluster-cephfs/g' ibm-cp4sthreatmanagements-instance.yaml
+  # sed -i.bak 's/managed-nfs-storage/ibmc-block-gold/g' ibm-cp4sthreatmanagements-instance.yaml
   # rm ibm-cpd-instance.yaml.bak
   # popd
 

@@ -25,7 +25,7 @@ spec:
             namespace: openshift-gitops
             serviceAccount: openshift-gitops-cntk-argocd-application-controller
           registry:
-            storageClassName: ocs-storagecluster-cephfs
+            storageClassName: ibmc-block-gold
             replicas: 2
           ingress:
             replicas: 2

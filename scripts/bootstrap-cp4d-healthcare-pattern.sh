@@ -499,7 +499,7 @@ print_urls_passwords () {
 get_rwx_storage_class () {
 
   DEFAULT_RWX_STORAGE_CLASS=${DEFAULT_RWX_STORAGE_CLASS:-managed-nfs-storage}
-  OCS_RWX_STORAGE_CLASS=${OCS_RWX_STORAGE_CLASS:-ocs-storagecluster-cephfs}
+  OCS_RWX_STORAGE_CLASS=${OCS_RWX_STORAGE_CLASS:-ibmc-block-gold}
 
   if [[ -n "${RWX_STORAGE_CLASS}" ]]; then
     echo "RWX Storage class specified to ${RWX_STORAGE_CLASS}"
